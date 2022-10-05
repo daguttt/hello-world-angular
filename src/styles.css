@@ -4,6 +4,7 @@
   --light-color: #ffffff;
   --light-color-70: rgba(255, 255, 255, 0.7);
   --dark-color: #000000;
+  --radius: 1.25rem;
 }
 
 html {
@@ -46,14 +47,20 @@ app-root small a {
   color: var(--dark-color);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   display: grid;
+  grid-template-columns: 1fr;
   place-content: center;
   width: 90%;
   max-width: 1280px;
   height: 80%;
   margin: 0 auto;
-  border-radius: 1.25rem;
+  border-radius: var(--radius);
   background-color: var(--light-color-70);
   color: var(--dark-color);
   box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
@@ -63,4 +70,14 @@ app-root small a {
   text-align: center;
   font-size: 4rem;
   font-weight: 700;
+}
+
+.container a.image-container {
+  width: 50%;
+  justify-self: center;
+  border-radius: calc(var(--radius) / 2);
+}
+
+.container a.image-container img {
+  border-radius: inherit;
 }

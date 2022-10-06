@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  img: string = `https://thecatapi.com/api/images/get?format=src&type=gif$results_per_page=`;
+  img: string = `https://thecatapi.com/api/images/get?format=src&type=gif&results_per_page=`;
 }
